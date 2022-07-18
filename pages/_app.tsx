@@ -3,13 +3,16 @@ import type { AppProps } from "next/app";
 
 import Layout from "../components/Layout";
 import AuthProvider from "../context/AuthenticationContext/AuthProvider";
+import UserProvider from "../context/UserContext/UserProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <UserProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </UserProvider>
     </AuthProvider>
   );
 }
