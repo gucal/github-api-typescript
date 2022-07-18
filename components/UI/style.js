@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors, fonts } from "./theme";
 
 export const Input = styled.input`
+  width: ${({ block }) => block && "100%"};
   height: 2.4rem;
   outline: 0;
   border: 1px solid ${colors.primary};
