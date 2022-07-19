@@ -7,9 +7,7 @@ import { useRouter } from 'next/router'
 
 import Card from '../components/Card'
 import { Button, Container, Flex, Input, Title } from '../components/UI/style'
-import Spin from '../components/Icons/Spin'
-import TwitterIcon from '../components/Icons/Twitter'
-import LinkIcon from '../components/Icons/Link'
+import { LinkIcon, TwitterIcon, Spin } from '../components/Icons'
 import UserContext from '../context/UserContext/store'
 import { getUserInfo } from '../services/users/getUserInfo'
 import AuthContext from '../context/AuthenticationContext/store'
@@ -29,16 +27,16 @@ const Home: NextPage = () => {
 
   const router = useRouter()
 
-  const submitClick = async () => {
-    const inputValue = userNameInputRef.current.value.trim().toLowerCase()
-    await getUserInfo(inputValue, dispatch)
-  }
-
   useEffect(() => {
     if (!authState.isLogin) {
       router.push('/login')
     }
   }, [])
+
+  const submitClick = async () => {
+    const inputValue = userNameInputRef.current.value.trim().toLowerCase()
+    await getUserInfo(inputValue, dispatch)
+  }
 
   return (
     <Container>
