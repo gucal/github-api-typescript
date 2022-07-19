@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function Spin() {
   return (
@@ -6,10 +6,10 @@ function Spin() {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       style={{
-        margin: "auto",
-        background: " rgb(255, 255, 255)",
-        display: "block",
-        shapeRendering: "auto",
+        margin: 'auto',
+        background: 'rgb(255, 255, 255)',
+        display: 'block',
+        shapeRendering: 'auto',
       }}
       width="50px"
       height="50px"
@@ -17,7 +17,7 @@ function Spin() {
       preserveAspectRatio="xMidYMid"
     >
       <g transform="rotate(0 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -29,7 +29,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(30 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -41,7 +41,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(60 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -53,7 +53,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(90 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -65,7 +65,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(120 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -77,7 +77,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(150 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -89,7 +89,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(180 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -101,7 +101,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(210 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -113,7 +113,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(240 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -125,7 +125,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(270 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -137,7 +137,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(300 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -149,7 +149,7 @@ function Spin() {
         </rect>
       </g>
       <g transform="rotate(330 50 50)">
-        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ff3938">
+        <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#006fdf">
           <animate
             attributeName="opacity"
             values="1;0"
@@ -161,7 +161,7 @@ function Spin() {
         </rect>
       </g>
     </svg>
-  );
+  )
 }
 
-export default Spin;
+export default Spin

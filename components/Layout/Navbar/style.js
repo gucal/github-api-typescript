@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const NavbarArea = styled.div`
   display: flex;
@@ -6,26 +6,26 @@ const NavbarArea = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 4rem;
-  background: #333;
+  background: #061a2f;
   padding: 0 1.5rem;
-`;
+`
 
 export const NavbarStartArea = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-`;
+`
 
 export const NavbarEndArea = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 export const NavbarItem = styled.a`
   font-size: 0.85rem;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-`;
+`
 
-export default NavbarArea;
+export default NavbarArea

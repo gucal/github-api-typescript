@@ -15,5 +15,5 @@ export const FormLabel = styled.label`
 
 export const FormErrorLabel = styled.label`
   font-size: ${fonts.sm};
-  color: ${colors.primary};
+  color: ${colors.error};
 `

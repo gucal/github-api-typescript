@@ -1,9 +1,9 @@
 export const colors = {
-  primary: '#ff3938',
+  primary: '#006FDF',
   primaryTextColor: '#1c1e21',
   secondaryTextColor: '#333',
   success: '#f6ffed',
-  error: '#fff2f0',
+  error: '#ED3B23',
 }
 
 export const fonts = {
