@@ -4,10 +4,18 @@ import Head from 'next/head'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useRouter } from 'next/router'
 
+import {
+  Container,
+  Flex,
+  Input,
+  Button,
+  Title,
+  Card,
+  FormItem,
+  FormLabel,
+  FormErrorLabel,
+} from '../../components'
 import AuthContext from '../../context/AuthenticationContext/store'
-import Card from '../../components/Card'
-import { FormItem, FormLabel, FormErrorLabel } from '../../components/Form'
-import { Container, Flex, Input, Button, Title } from '../../components/UI/style'
 
 interface IFormData {
   username: string

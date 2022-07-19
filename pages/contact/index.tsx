@@ -3,10 +3,18 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
-import { Button, Container, Input, Textarea, Title } from '../../components/UI/style'
-import Card from '../../components/Card'
-import { FormErrorLabel, FormItem, FormLabel } from '../../components/Form'
-import Alert from '../../components/Alert'
+import {
+  Button,
+  Container,
+  Input,
+  Textarea,
+  Title,
+  Alert,
+  Card,
+  FormErrorLabel,
+  FormItem,
+  FormLabel,
+} from '../../components'
 
 interface IFormInput {
   fullname: string

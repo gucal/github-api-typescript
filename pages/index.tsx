@@ -5,13 +5,11 @@ import Image from 'next/image'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import Card from '../components/Card'
-import { Button, Container, Flex, Input, Title } from '../components/UI/style'
+import { Alert, Button, Container, Flex, Input, Title, Card } from '../components'
 import { LinkIcon, TwitterIcon, Spin } from '../components/Icons'
 import UserContext from '../context/UserContext/store'
-import { getUserInfo } from '../services/users/getUserInfo'
 import AuthContext from '../context/AuthenticationContext/store'
-import Alert from '../components/Alert'
+import { getUserInfo } from '../services/users/getUserInfo'
 
 const Home: NextPage = () => {
   const { state, dispatch } = useContext(UserContext)
