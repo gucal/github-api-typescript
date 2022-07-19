@@ -31,7 +31,7 @@ const Home: NextPage = () => {
     }
   }, [])
 
-  const submitClick = async () => {
+  const searchUser = async () => {
     const inputValue = userNameInputRef.current.value.trim().toLowerCase()
     await getUserInfo(inputValue, dispatch)
   }
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
           ref={userNameInputRef}
           placeholder="Enter username..."
         />
-        <Button style={{ minWidth: '100px' }} onClick={submitClick}>
+        <Button style={{ minWidth: '100px' }} onClick={searchUser}>
           Search User
         </Button>
       </Flex>
