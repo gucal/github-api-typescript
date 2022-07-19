@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useForm, SubmitHandler } from 'react-hook-form'
@@ -5,6 +6,7 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import { Button, Container, Input, Textarea, Title } from '../../components/UI/style'
 import Card from '../../components/Card'
 import { FormErrorLabel, FormItem, FormLabel } from '../../components/Form'
+import Alert from '../../components/Alert'
 
 interface IFormInput {
   fullname: string
@@ -19,7 +21,9 @@ const Contact: NextPage = () => {
     formState: { errors },
   } = useForm<IFormInput>({ mode: 'onSubmit' })
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data)
+  const [isSubmit, setSubmit] = useState(false)
+
+  const onSubmit: SubmitHandler<IFormInput> = () => setSubmit(true)
 
   return (
     <Container>
@@ -69,6 +73,11 @@ const Contact: NextPage = () => {
                   Submit
                 </Button>
               </FormItem>
+              {isSubmit && (
+                <Alert type="success">
+                  Thanks! Your information has been saved. We will contact you as soon as possible
+                </Alert>
+              )}
             </form>
           </div>
           <div className="w-full">

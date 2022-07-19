@@ -3,11 +3,10 @@ import { colors, fonts } from '../../styles/theme'
 
 const AlertArea = styled.div`
   padding: 1rem;
-  color: #fff;
+  color: ${({ type }) => (type == 'success' ? colors.secondaryTextColor : '#fff')};
   font-weight: 400;
   font-size: ${fonts.md};
-  background: ${colors.primary};
-  border: 1px solid #d3d3d3;
+  background: ${({ type }) => (type == 'success' ? colors.success : colors.error)};
   border-radius: 4px;
 `
 
