@@ -12,6 +12,7 @@ import LinkIcon from '../components/Icons/Link'
 import UserContext from '../context/UserContext/store'
 import { getUserInfo } from '../services/users/getUserInfo'
 import AuthContext from '../context/AuthenticationContext/store'
+import Alert from '../components/Alert'
 
 const Home: NextPage = () => {
   const { state, dispatch } = useContext(UserContext)
@@ -57,10 +58,12 @@ const Home: NextPage = () => {
       {isLoading ? (
         <Spin />
       ) : userError ? (
-        <div>Kullanici Bulunamadi</div>
+        <div className="mt-4">
+          <Alert>User Not Found</Alert>
+        </div>
       ) : (
         Object.keys(userInfo).length > 0 && (
-          <Card style={{ marginTop: '2rem' }} space={4} width={'100%'}>
+          <Card className="mt-4" space={4} width={'100%'}>
             <Flex style={{ justifyContent: 'space-between' }} gap={8}>
               <div className="flex justify-center gap-lg">
                 <Image className="rounded" width={150} height={150} src={userInfo.avatar_url} />
@@ -111,7 +114,7 @@ const Home: NextPage = () => {
                 </span>
               </div>
             </Flex>
-            <hr style={{ margin: '2rem 0' }} />
+            <hr className="mt-4 mb-4" />
             <Flex>
               <div className="grid-container">
                 {userTogetherLanguages.map((item: any) => (
