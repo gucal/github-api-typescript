@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useForm } from 'react-hook-form'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import { useRouter } from 'next/router'
 
 import AuthContext from '../../context/AuthenticationContext/store'
@@ -9,7 +9,7 @@ import Card from '../../components/Card'
 import { FormItem, FormLabel, FormErrorLabel } from '../../components/Form'
 import { Container, Flex, Input, Button, Title } from '../../components/UI/style'
 
-type FormData = {
+interface IFormData {
   username: string
   password: string
 }
@@ -21,14 +21,14 @@ const Login: NextPage = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>()
+  } = useForm<IFormData>()
 
-  const onSubmit = handleSubmit(() => {
+  const onSubmit: SubmitHandler<IFormData> = () => {
     dispatch({
       type: 'LOGIN',
     })
     router.push(`/`)
-  })
+  }
 
   return (
     <Container>
@@ -38,7 +38,7 @@ const Login: NextPage = () => {
       <Flex style={{ marginTop: '4rem' }}>
         <Card width={'400px'} space={3}>
           <Title>Login</Title>
-          <form style={{ marginTop: 36 }} onSubmit={onSubmit}>
+          <form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
             <FormItem>
               <FormLabel>Username:</FormLabel>
               <Input {...register('username', { required: true })} />
