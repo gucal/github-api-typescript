@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   const userInfo: any = state.userInfo
   const userRepoInfo: any = state.userRepositories
   const userTogetherLanguages: any = state.userTogetherLanguages
-  const userError: any = state.userError
+  const isUserError: any = state.isUserError
 
   const userNameInputRef = useRef() as MutableRefObject<HTMLInputElement>
 
@@ -57,21 +57,22 @@ const Home: NextPage = () => {
       </Flex>
 
       {isLoading ? (
-        <Spin />
-      ) : userError ? (
+        <div className="mt-4">
+          <Spin />
+        </div>
+      ) : isUserError ? (
         <div className="mt-4">
           <Alert>User Not Found</Alert>
         </div>
       ) : (
         Object.keys(userInfo).length > 0 && (
-          <Card className="mt-4" space={4} width={'100%'}>
+          <Card className="mt-4" space={3} width={'100%'}>
             <Flex style={{ justifyContent: 'space-between' }} gap={8}>
               <div className="flex justify-center gap-lg">
                 <Image className="rounded" width={150} height={150} src={userInfo.avatar_url} />
                 <div className="flex column gap-md justify-center">
                   <Link href={userInfo.html_url} passHref>
                     <a target={'_blank'}>
-                      {' '}
                       <Title style={{ fontSize: '1.3rem' }}>{userInfo.name}</Title>
                     </a>
                   </Link>
@@ -100,7 +101,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
 
-              <div className="flex column gap-sm justify-center">
+              <div className="flex column gap-sm justify-center mobile-none">
                 <span>
                   Followers: <span className="text-bold">{userInfo.followers}</span>
                 </span>
@@ -118,8 +119,8 @@ const Home: NextPage = () => {
             <hr className="mt-4 mb-4" />
             <Flex>
               <div className="grid-container">
-                {userTogetherLanguages.map((item: any) => (
-                  <div className="grid-item">
+                {userTogetherLanguages.map((item: any, index: number) => (
+                  <div key={index} className="grid-item">
                     <span className="text-bold">{item.name}</span>
                     <span style={{ fontSize: '.9rem' }}>%{item.size}</span>
                   </div>

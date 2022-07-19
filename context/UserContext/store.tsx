@@ -6,7 +6,7 @@ type InitialStateType = {
   userRepositories: object[];
   userAllLanguages: object[];
   userTogetherLanguages: object[];
-  userError: boolean;
+  isUserError: boolean;
 };
 
 export const initialState = {
@@ -15,7 +15,7 @@ export const initialState = {
   userRepositories: [],
   userAllLanguages: [],
   userTogetherLanguages: [],
-  userError: false,
+  isUserError: false,
 };
 
 const UserContext = createContext<{

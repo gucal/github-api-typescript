@@ -1,5 +1,3 @@
-import { initialState } from './store'
-
 export function reducer(state: any, action: any) {
   switch (action.type) {
     case 'PENDING':
@@ -26,7 +24,12 @@ export function reducer(state: any, action: any) {
       state.isLoading = false
       return { ...state }
     case 'RESET':
-      state = initialState
+      state.isLoading = false
+      state.userInfo = {}
+      state.userRepositories = []
+      state.userAllLanguages = []
+      state.userTogetherLanguages = []
+      state.userError = false
       return { ...state }
     default:
       return state
