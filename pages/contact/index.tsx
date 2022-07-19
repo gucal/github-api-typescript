@@ -18,12 +18,16 @@ const Contact: NextPage = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<IFormInput>({ mode: 'onSubmit' })
 
   const [isSubmit, setSubmit] = useState(false)
 
-  const onSubmit: SubmitHandler<IFormInput> = () => setSubmit(true)
+  const onSubmit: SubmitHandler<IFormInput> = () => {
+    reset()
+    setSubmit(true)
+  }
 
   return (
     <Container>
@@ -36,7 +40,7 @@ const Contact: NextPage = () => {
           <div className="w-full">
             <form onSubmit={handleSubmit(onSubmit)}>
               <FormItem>
-                <FormLabel>Fullname:</FormLabel>
+                <FormLabel>Name</FormLabel>
                 <Input
                   {...register('fullname', {
                     required: { value: true, message: 'Fullname is required!' },
@@ -45,7 +49,7 @@ const Contact: NextPage = () => {
                 {errors.fullname && <FormErrorLabel>{errors.fullname.message}</FormErrorLabel>}
               </FormItem>
               <FormItem>
-                <FormLabel>Email:</FormLabel>
+                <FormLabel>E-mail</FormLabel>
                 <Input
                   {...register('email', {
                     required: { value: true, message: 'Email is required!' },
@@ -58,7 +62,7 @@ const Contact: NextPage = () => {
                 {errors.email && <FormErrorLabel>{errors.email.message}</FormErrorLabel>}
               </FormItem>
               <FormItem>
-                <FormLabel>Messages:</FormLabel>
+                <FormLabel>Messages</FormLabel>
                 <Textarea
                   rows="3"
                   {...register('message', {
