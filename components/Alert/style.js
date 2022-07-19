@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../UI/theme'
+import { colors } from '../../styles/theme'
 
 const AlertArea = styled.div`
   padding: 1rem;
