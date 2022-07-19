@@ -30,7 +30,8 @@ const Home: NextPage = () => {
   const router = useRouter()
 
   const submitClick = async () => {
-    await getUserInfo(userNameInputRef.current.value, dispatch)
+    const inputValue = userNameInputRef.current.value.trim().toLowerCase()
+    await getUserInfo(inputValue, dispatch)
   }
 
   useEffect(() => {
