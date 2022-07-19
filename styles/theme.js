@@ -7,7 +7,7 @@ export const colors = {
 }
 
 export const fonts = {
-  sm: '0.7rem',
+  sm: '0.8rem',
   md: '0.9rem',
   lg: '1.1rem',
   xl: '1.5rem',

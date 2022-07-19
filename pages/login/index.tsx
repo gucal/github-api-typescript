@@ -41,12 +41,12 @@ const Login: NextPage = () => {
           <form style={{ marginTop: 36 }} onSubmit={onSubmit}>
             <FormItem>
               <FormLabel>Username:</FormLabel>
-              <Input {...(register('username'), { required: true })} />
+              <Input {...register('username', { required: true })} />
               {errors.username && <FormErrorLabel>Username is required</FormErrorLabel>}
             </FormItem>
             <FormItem>
               <FormLabel>Password:</FormLabel>
-              <Input {...(register('password'), { required: true })} type="password" />
+              <Input {...register('password', { required: true })} type="password" />
               {errors.password && <FormErrorLabel>Password is required</FormErrorLabel>}
             </FormItem>
             <FormItem>

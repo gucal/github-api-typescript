@@ -13,7 +13,7 @@ export const FormLabel = styled.label`
   color: ${colors.secondaryTextColor};
 `
 
-export const FormErrorLabel = styled.p`
+export const FormErrorLabel = styled.label`
   font-size: ${fonts.sm};
   color: ${colors.primary};
 `
