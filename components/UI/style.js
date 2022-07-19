@@ -16,6 +16,17 @@ export const Input = styled.input`
   color: ${colors.primaryTextColor};
   padding: 0.2rem 0.6rem;
 `
+export const Textarea = styled.textarea`
+  font-family: unset;
+  resize: vertical;
+  width: ${({ block }) => block && '100%'};
+  outline: 0;
+  border: 1px solid ${colors.primary};
+  border-radius: 4px;
+  font-size: ${fonts.md};
+  color: ${colors.primaryTextColor};
+  padding: 0.6rem;
+`
 
 export const Button = styled.button`
   height: 2.4rem;

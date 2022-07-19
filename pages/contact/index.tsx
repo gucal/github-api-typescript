@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
-import { Button, Container, Input, Title } from '../../components/UI/style'
+import { Button, Container, Input, Textarea, Title } from '../../components/UI/style'
 import Card from '../../components/Card'
 import { FormErrorLabel, FormItem, FormLabel } from '../../components/Form'
 
@@ -17,7 +17,7 @@ const Contact: NextPage = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<IFormInput>()
+  } = useForm<IFormInput>({ mode: 'onSubmit' })
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data)
 
@@ -28,21 +28,40 @@ const Contact: NextPage = () => {
       </Head>
       <Card space={3}>
         <Title>Contact Form</Title>
-        <form style={{ marginTop: 36 }} onSubmit={handleSubmit(onSubmit)}>
+
+        <form style={{ marginTop: 36, width: '100%' }} onSubmit={handleSubmit(onSubmit)}>
           <FormItem>
             <FormLabel>Fullname:</FormLabel>
-            <Input {...register('fullname', { required: true })} />
-            {errors.fullname && <FormErrorLabel>Username is required</FormErrorLabel>}
+            <Input
+              {...register('fullname', {
+                required: { value: true, message: 'Fullname is required!' },
+              })}
+            />
+            {errors.fullname && <FormErrorLabel>{errors.fullname.message}</FormErrorLabel>}
           </FormItem>
           <FormItem>
             <FormLabel>Email:</FormLabel>
-            <Input {...register('email', { required: true })} />
-            {errors.email && <FormErrorLabel>Email is required</FormErrorLabel>}
+            <Input
+              {...register('email', {
+                required: { value: true, message: 'Email is required!' },
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: 'Invalid email address!',
+                },
+              })}
+            />
+            {errors.email && <FormErrorLabel>{errors.email.message}</FormErrorLabel>}
           </FormItem>
           <FormItem>
             <FormLabel>Messages:</FormLabel>
-            <Input {...register('message', { required: true })} type="textarea" />
-            {errors.message && <FormErrorLabel>Message is required</FormErrorLabel>}
+            <Textarea
+              rows="3"
+              {...register('message', {
+                required: { value: true, message: 'Fullname is required!' },
+              })}
+              type="textarea"
+            />
+            {errors.message && <FormErrorLabel>{errors.message.message}</FormErrorLabel>}
           </FormItem>
           <FormItem>
             <Button type="submit" block>
