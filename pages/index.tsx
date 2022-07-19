@@ -47,10 +47,14 @@ const Home: NextPage = () => {
       </Head>
       <Flex gap={12}>
         <Input
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
           defaultValue={userInfo.login}
           block
           ref={userNameInputRef}
-          placeholder="Enter username"
+          placeholder="Enter username..."
         />
         <Button style={{ minWidth: '100px' }} onClick={submitClick}>
           Search User

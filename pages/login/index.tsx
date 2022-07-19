@@ -41,12 +41,25 @@ const Login: NextPage = () => {
           <form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
             <FormItem>
               <FormLabel>Username</FormLabel>
-              <Input {...register('username', { required: true })} />
+              <Input
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                {...register('username', { required: true })}
+              />
               {errors.username && <FormErrorLabel>Username is required</FormErrorLabel>}
             </FormItem>
             <FormItem>
               <FormLabel>Password</FormLabel>
-              <Input {...register('password', { required: true })} type="password" />
+              <Input
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                {...register('password', { required: true })}
+                type="password"
+              />
               {errors.password && <FormErrorLabel>Password is required</FormErrorLabel>}
             </FormItem>
             <FormItem>

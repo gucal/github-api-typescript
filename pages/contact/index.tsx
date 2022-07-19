@@ -42,6 +42,9 @@ const Contact: NextPage = () => {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <Input
+                  autocomplete="off"
+                  autocorrect="off"
+                  spellcheck="false"
                   {...register('fullname', {
                     required: { value: true, message: 'Fullname is required!' },
                   })}
@@ -51,6 +54,10 @@ const Contact: NextPage = () => {
               <FormItem>
                 <FormLabel>E-mail</FormLabel>
                 <Input
+                  autocomplete="off"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  spellcheck="false"
                   {...register('email', {
                     required: { value: true, message: 'Email is required!' },
                     pattern: {
