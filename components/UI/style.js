@@ -15,6 +15,10 @@ export const Input = styled.input`
   font-size: ${fonts.md};
   color: ${colors.primaryTextColor};
   padding: 0.2rem 0.6rem;
+
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
 `
 export const Textarea = styled.textarea`
   font-family: unset;
@@ -26,6 +30,10 @@ export const Textarea = styled.textarea`
   font-size: ${fonts.md};
   color: ${colors.primaryTextColor};
   padding: 0.6rem;
+
+  @media (max-width: 700px) {
+    font-size: 1rem;
+  }
 `
 
 export const Button = styled.button`

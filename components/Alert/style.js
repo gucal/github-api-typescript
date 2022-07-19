@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-import { colors } from '../../styles/theme'
+import { colors, fonts } from '../../styles/theme'
 
 const AlertArea = styled.div`
   padding: 1rem;
-  color: ${colors.primaryTextColor};
-  font-weight: 700;
-  background: ${colors.error};
-  border: 1px solid #ffccc7;
+  color: #fff;
+  font-weight: 400;
+  font-size: ${fonts.md};
+  background: ${colors.primary};
+  border: 1px solid #d3d3d3;
   border-radius: 4px;
 `
 

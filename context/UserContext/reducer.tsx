@@ -1,7 +1,7 @@
 export function reducer(state: any, action: any) {
   switch (action.type) {
     case 'PENDING':
-      state.userError = false
+      state.isUserError = false
       state.isLoading = true
       return { ...state }
     case 'SET_USER_INFO':
@@ -17,7 +17,7 @@ export function reducer(state: any, action: any) {
       state.userTogetherLanguages = action.payload
       return { ...state }
     case 'USER_NOT_DEFINED':
-      state.userError = true
+      state.isUserError = true
       state.isLoading = false
       return { ...state }
     case 'COMPLETED':
@@ -29,7 +29,7 @@ export function reducer(state: any, action: any) {
       state.userRepositories = []
       state.userAllLanguages = []
       state.userTogetherLanguages = []
-      state.userError = false
+      state.isUserError = false
       return { ...state }
     default:
       return state

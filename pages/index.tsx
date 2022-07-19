@@ -62,7 +62,7 @@ const Home: NextPage = () => {
         </div>
       ) : isUserError ? (
         <div className="mt-4">
-          <Alert>User Not Found</Alert>
+          <Alert>User Not Found!</Alert>
         </div>
       ) : (
         Object.keys(userInfo).length > 0 && (
