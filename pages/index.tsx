@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         <Flex flexDirection={'column'}>
           <Title className="text-center">Github User Information</Title>
           <p className="text-center">
-            It is a web application that displays important information on users' Github accounts.
+            It is a web application that displays important information on users Github accounts.
             Lists the ratio of languages used to all languages.
           </p>
           <span className="text-center">
