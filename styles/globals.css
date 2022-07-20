@@ -71,6 +71,10 @@ a {
   font-weight: 700;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .grid-container {
   width: 100%;
   display: grid;
